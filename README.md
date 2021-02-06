@@ -12,14 +12,15 @@ In this assignment, I was able to implement and use the following widgets and el
 In addition to the content covered through to week 3, the following were some of the sources I used to achieve my ideal UI.
 
 # Sources:
+Guiding Tutorials:
 1. Drawer - https://www.youtube.com/watch?v=zVTV7F0Bme4
 https://www.yourowncodes.com/how-to-add-images-icons-circle-avatar-in-flutter-application/
 2. Bottom NavBar - https://www.youtube.com/watch?v=elLkVWt7gRM
 
-# Images:
+Images:
 https://unsplash.com/
 
-# Icons:
+Icons:
 Flaticon
 
 # NOTES:
@@ -31,19 +32,19 @@ Below are some screenshots of the Application:
 
 # Main Landing Page:
 
-![Main Page](mini-project-1-Ziithe/Ziithe_MiniProject1_Wk3/screenshots/1.jpg)
+![Main Page](Ziithe_MiniProject1_Wk3/screenshots/1.jpg)
 
 # Drawer:
 
-![Main Page](mini-project-1-Ziithe/Ziithe_MiniProject1_Wk3/screenshots/2.jpg)
+![Drawer](Ziithe_MiniProject1_Wk3/screenshots/2.jpg)
 
 # Scrolling View:
 
-![Main Page](mini-project-1-Ziithe/Ziithe_MiniProject1_Wk3/screenshots/3.jpg)
+![Scrolling Grid](Ziithe_MiniProject1_Wk3/screenshots/3.jpg)
 
 # Design Grid:
 
-![Main Page](mini-project-1-Ziithe/Ziithe_MiniProject1_Wk3/screenshots/4.jpg)
+![Design](Ziithe_MiniProject1_Wk3/screenshots/4.jpg)
 
 
 # By Ziithe Ewen Hiwa
