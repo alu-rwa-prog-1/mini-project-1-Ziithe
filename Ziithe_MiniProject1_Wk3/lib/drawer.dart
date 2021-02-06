@@ -15,6 +15,7 @@ class MyDrawer extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 50.0,
+                backgroundColor: Colors.teal,
                 backgroundImage: AssetImage('images/profilepic.jpg'),
               ),
               SizedBox(
@@ -69,7 +70,7 @@ class MyDrawer extends StatelessWidget {
                 title: Text("Settings"),
               ),
               SizedBox(
-                height: 300.0,
+                height: 200.0,
               ),
               ListTile(
                 onTap: () {},

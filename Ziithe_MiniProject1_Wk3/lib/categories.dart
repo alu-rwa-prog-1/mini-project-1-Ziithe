@@ -10,7 +10,7 @@ class Category extends StatelessWidget {
         children: <Widget>[
           Container(
             padding: EdgeInsets.only(
-              left: 10.0,
+              left: 20.0,
             ),
             child: Row(
               children: <Widget>[
@@ -24,7 +24,6 @@ class Category extends StatelessWidget {
                       ),
                       Text(
                         'Dahlias',
-                        style: TextStyle(fontSize: 15),
                       ),
                     ],
                   ),
@@ -40,7 +39,9 @@ class Category extends StatelessWidget {
                         backgroundImage: AssetImage('images/rose.png'),
                         backgroundColor: Colors.white,
                       ),
-                      Text('Roses', style: TextStyle(fontSize: 15)),
+                      Text(
+                        'Roses',
+                      )
                     ],
                   ),
                 ),
@@ -55,7 +56,9 @@ class Category extends StatelessWidget {
                         backgroundImage: AssetImage('images/lily.png'),
                         backgroundColor: Colors.white,
                       ),
-                      Text('Lillies', style: TextStyle(fontSize: 15)),
+                      Text(
+                        'Lillies',
+                      ),
                     ],
                   ),
                 ),
@@ -70,37 +73,9 @@ class Category extends StatelessWidget {
                         backgroundImage: AssetImage('images/daisy.png'),
                         backgroundColor: Colors.white,
                       ),
-                      Text('Daisies', style: TextStyle(fontSize: 15)),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  width: 15.0,
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage('images/gardenia.png'),
-                        backgroundColor: Colors.white,
+                      Text(
+                        'Daisies',
                       ),
-                      Text('Gardenias', style: TextStyle(fontSize: 15)),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  width: 15.0,
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage('images/orchid.png'),
-                        backgroundColor: Colors.white,
-                      ),
-                      Text('Orchids', style: TextStyle(fontSize: 15)),
                     ],
                   ),
                 ),
@@ -115,7 +90,43 @@ class Category extends StatelessWidget {
                         backgroundImage: AssetImage('images/sunflower.png'),
                         backgroundColor: Colors.white,
                       ),
-                      Text('Sunflowers', style: TextStyle(fontSize: 15)),
+                      Text(
+                        'Sunflowers',
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 15.0,
+                ),
+                Container(
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage('images/gardenia.png'),
+                        backgroundColor: Colors.white,
+                      ),
+                      Text(
+                        'Gardenias',
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 15.0,
+                ),
+                Container(
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage('images/orchid.png'),
+                        backgroundColor: Colors.white,
+                      ),
+                      Text(
+                        'Orchids',
+                      ),
                     ],
                   ),
                 ),
@@ -130,7 +141,9 @@ class Category extends StatelessWidget {
                         backgroundImage: AssetImage('images/tulip.png'),
                         backgroundColor: Colors.white,
                       ),
-                      Text('Tulips', style: TextStyle(fontSize: 15)),
+                      Text(
+                        'Tulips',
+                      ),
                     ],
                   ),
                 )

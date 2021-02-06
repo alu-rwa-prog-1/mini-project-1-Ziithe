@@ -1,5 +1,6 @@
 import 'package:Ziithe_MiniProject1_Wk3/categories.dart';
 import 'package:Ziithe_MiniProject1_Wk3/drawer.dart';
+import 'package:Ziithe_MiniProject1_Wk3/image_card.dart';
 import 'package:flutter/material.dart';
 import 'drawer.dart';
 
@@ -26,6 +27,32 @@ class _MyAppState extends State<MyApp> {
     'images/10.jpg'
   ];
 
+  final List<String> _listText = [
+    'Rose Bouquet,',
+    'Fresh Tulips,',
+    'Wedding Bouquet,',
+    'Garden Sunflowers,',
+    'Pink Roses,',
+    'Rose Basket,',
+    'Pink Dahlias,',
+    'Pink Orchids,',
+    'Mixed Fresh Bouquet,',
+    'Mixed Rose Bouquet,'
+  ];
+
+  final List<String> _listPrice = [
+    'RWF 6000',
+    'RWF 5000',
+    'RWF 7000',
+    'RWF 4500',
+    'RWF 6500',
+    'RWF 12000',
+    'RWF 7000',
+    'RWF 4500',
+    'RWF 6000',
+    'RWF 8000'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,7 +63,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text("Shalom's Botanic"),
+          title: Text("Suku's Botanic"),
           actions: <Widget>[
             Padding(
               padding: EdgeInsets.only(right: 30.0),
@@ -52,63 +79,67 @@ class _MyAppState extends State<MyApp> {
           child: MyDrawer(),
         ),
         //Body
-        body: ListView(
-          scrollDirection: Axis.vertical,
-          physics: const AlwaysScrollableScrollPhysics(),
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(top: 15.0, left: 10.0),
-              child: Text("Categories",
-                  style:
-                      TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold)),
-            ),
-            SizedBox(height: 15.0),
-            Category(),
-            Container(
-              padding: EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
-              child: Material(
-                elevation: 5.0,
-                borderRadius: BorderRadius.circular(30.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 30.0, vertical: 14.0),
-                    hintText: "What are you looking for?",
-                    suffixIcon: Icon(Icons.search),
-                    border: InputBorder.none,
+        body: SafeArea(
+          bottom: false,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(top: 15.0, left: 10.0),
+                  child: Text("Categories",
+                      style: TextStyle(
+                          fontSize: 22.0, fontWeight: FontWeight.bold)),
+                ),
+                SizedBox(height: 5.0),
+                Category(),
+                Container(
+                  padding: EdgeInsets.only(left: 20.0, right: 15.0),
+                  child: Material(
+                    elevation: 5.0,
+                    borderRadius: BorderRadius.circular(30.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(
+                            horizontal: 30.0, vertical: 14.0),
+                        hintText: "What are you looking for?",
+                        suffixIcon: Icon(Icons.search),
+                        border: InputBorder.none,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-            SizedBox(
-              height: 30.0,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 10.0),
-              child: Text("Popular Products",
-                  style:
-                      TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold)),
-            ),
-            Expanded(
-              child: GridView.count(
-                crossAxisCount: 2,
-                padding: EdgeInsets.all(20.0),
-                crossAxisSpacing: 20,
-                mainAxisSpacing: 20,
-                shrinkWrap: true,
-                children: _listItem
-                    .map((item) => Card(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(item),
-                                    fit: BoxFit.cover)),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10.0, left: 10.0),
+                  child: Text("Popular Products",
+                      style: TextStyle(
+                          fontSize: 22.0, fontWeight: FontWeight.bold)),
+                ),
+                Container(
+                  height: 500,
+                  width: 500,
+                  child: GridView.count(
+                      crossAxisCount: 2,
+                      padding: EdgeInsets.all(10.0),
+                      crossAxisSpacing: 5,
+                      mainAxisSpacing: 5,
+                      shrinkWrap: true,
+                      children: List.generate(_listItem.length, (index) {
+                        return Center(
+                          child: ImageCard(
+                            item: _listItem[index],
+                            name: _listText[index],
+                            price: _listPrice[index],
                           ),
-                        ))
-                    .toList(),
-              ),
+                        );
+                      })),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
         //Bottom NavBar
         bottomNavigationBar: BottomNavigationBar(
